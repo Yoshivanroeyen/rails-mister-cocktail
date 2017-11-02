@@ -1,0 +1,16 @@
+<h1>New dose</h1>
+
+<%= simple_form_for([@cocktail, @ingredient, @dose]) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :description %>
+  </div>
+
+  <%= f.input :ingredient, :collection => Ingredient.all %>
+
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
