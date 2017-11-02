@@ -20,6 +20,7 @@ end
 def destroy
 
 @dose = Dose.find(params[:id])
+@cocktail = dose.cocktail
 @dose.delete
 
 end

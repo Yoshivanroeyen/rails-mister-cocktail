@@ -1,0 +1,21 @@
+.card {
+  background-color: lightgray;
+  padding: 2px 6px 6px 6px;
+  border-radius: 4px;
+
+  margin: 12px;
+  text-align: center;
+  color: rgba(255,255,255, 0.7);
+  background-size: cover;
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+
+}
+
+.card:hover {
+    /*margin-top: -5px;*/
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
+
+}
