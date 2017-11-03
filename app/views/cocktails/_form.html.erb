@@ -8,6 +8,14 @@
         <%= f.input :name %>
       </div>
 
+      <div class="form-inputs">
+        <%= f.input :photo %>
+      </div>
+
+      <div class="form-inputs">
+        <%= f.input :photo_cache, as: :hidden %>
+      </div>
+
       <div class="form-actions">
         <%= f.button :submit, class: 'btn btn-primary' %>
       </div>

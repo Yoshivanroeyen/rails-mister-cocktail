@@ -14,7 +14,7 @@
 
     <div class="col-xs-12 col-md-4">
 
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('/assets/<%= @rand_background %>.jpg');">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= cl_image_path @cocktail.photo, height: 300, width: 400, crop: :fill %>')">
         <h3 class="text-center"><%= cocktail.name %></h3>
 
         <%= link_to "show cocktail", cocktail_path(cocktail),  class: "btn btn-primary" %>
@@ -23,3 +23,7 @@
     <% end %>
   </div>
 </div>
+
+
+<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+
