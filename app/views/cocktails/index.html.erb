@@ -1,29 +1,24 @@
 
-<h1 class="text-center" >List of cocktails</h1>
+<h1 class="text-center jumbotron" >List of cocktails</h1>
 
 <div class="container">
-  <div class="row">
-    <div class="col-sm-4 col-sm-offset-1"></div>
-            <%= link_to "Add cocktail", new_cocktail_path,  class: "btn btn-primary" %>
+  <div class="row text-center">
+    <%= link_to "Add cocktail", new_cocktail_path,  class: "btn btn-primary" %>
 
   </div>
-   <div class="row">
-
+  <div class="row">
     <% @cocktails.each do |cocktail| %>
-    <% @rand_background =  ['berlin', 'shanghai', 'rio'].sample%>
-
     <div class="col-xs-12 col-md-4">
+      <%= link_to cocktail_path(cocktail) do %>
 
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= cl_image_path @cocktail.photo, height: 300, width: 400, crop: :fill %>')">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
         <h3 class="text-center"><%= cocktail.name %></h3>
 
-        <%= link_to "show cocktail", cocktail_path(cocktail),  class: "btn btn-primary" %>
+
+
       </div>
+      <% end %>
     </div>
     <% end %>
   </div>
 </div>
-
-
-<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
-
