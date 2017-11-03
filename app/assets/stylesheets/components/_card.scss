@@ -11,6 +11,7 @@
   transition: all 0.3s ease;
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
 
+
 }
 
 .card:hover {
@@ -18,4 +19,12 @@
     transform: scale(1);
     box-shadow: 0 0 10px rgba(0,0,0,0.9);
 
+}
+
+.card-height {
+  width:100%;
+
+}
+.card-height p, h4 {
+  text-align: left;
 }

@@ -1,13 +1,13 @@
 <h1 class="text-center jumbotron">New dose</h1>
 
-<%= simple_form_for([@cocktail, @ingredient, @dose]) do |f| %>
+<%= simple_form_for([@cocktail, @dose ]) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
     <%= f.input :description %>
   </div>
-
-  <%= f.input :ingredient, :collection => Ingredient.all %>
+  <!-- # baby dolfijn hater. -->
+  <%= f.input :ingredient, :collection => @ingredients %>
 
 
   <div class="form-actions">
